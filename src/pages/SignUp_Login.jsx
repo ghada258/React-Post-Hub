@@ -1,0 +1,83 @@
+import React from "react";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import { Button } from "@mui/material";
+
+
+const SignUp = () => {
+  return (
+    <>
+      <Container maxWidth={false} disableGutters>
+        <Box
+          sx={{
+            backgroundImage: "url(sign_up_image.svg)",
+            backgroundSize: "cover",
+            height: "100vh",
+            backgroundPosition: "center",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            paddingRight: 10,
+          }}
+        >
+          <Box
+            component="form"
+            sx={{
+              width: "40%",
+              backgroundColor: "white",
+              p: 2,
+              display: "flex",
+              gap: 3,
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              borderRadius: 3,
+              paddingY: 5,
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <Box sx={{display:"flex",gap:1,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+              <Box component="img" src="logo.svg" alt="logo" />
+              <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
+                Sign Up To Reactive Shoes Website
+              </Typography>
+            </Box>
+
+            <TextField
+              required
+              id="outlined-required"
+              label="Name"
+              sx={{ width: "80%",marginTop:3 }}
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Email"
+              sx={{ width: "80%" }}
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Password"
+              type="password"
+              sx={{ width: "80%" }}
+            />
+            
+            <Button variant="contained" size="large" sx={{backgroundColor:'#28665B',width:'80%',height:50, marginTop:3}}>Sign Up</Button>
+            <Box sx={{display:'flex',justifyContent:'center' ,alignItems:'center'}}>
+            <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
+                Already Have an Account ?
+              </Typography>
+              <Button href="#text-buttons" sx={{color:'#28665B'}}>Sign In</Button>
+            </Box>  
+          </Box>
+        </Box>
+      </Container>
+    </>
+  );
+};
+
+export default SignUp;
