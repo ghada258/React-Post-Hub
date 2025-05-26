@@ -66,6 +66,7 @@ const SignUp = () => {
               sx={{ width: "80%" }}
             />
             
+            
             <Button variant="contained" size="large" sx={{backgroundColor:'#28665B',width:'80%',height:50, marginTop:3}}>Sign Up</Button>
             <Box sx={{display:'flex',justifyContent:'center' ,alignItems:'center'}}>
             <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
