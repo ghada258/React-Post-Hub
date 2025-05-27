@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -7,6 +7,12 @@ import { Button } from "@mui/material";
 
 
 const SignUp = () => {
+  const [signUpPage,setSignUpPage] = useState(true);
+  
+  const handleForm =()=>{
+    setSignUpPage(!signUpPage);
+  }
+
   return (
     <>
       <Container maxWidth={false} disableGutters>
@@ -42,16 +48,16 @@ const SignUp = () => {
             <Box sx={{display:"flex",gap:1,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
               <Box component="img" src="logo.svg" alt="logo" />
               <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
-                Sign Up To Reactive Shoes Website
+                {signUpPage ? 'Sign Up To Reactive Shoes Website' :  "Sign In To Reactive Shoes Website" } 
               </Typography>
             </Box>
 
-            <TextField
+           {signUpPage && <TextField
               required
               id="outlined-required"
               label="Name"
               sx={{ width: "80%",marginTop:3 }}
-            />
+            />} 
             <TextField
               required
               id="outlined-required"
@@ -66,15 +72,17 @@ const SignUp = () => {
               sx={{ width: "80%" }}
             />
             
-            
-            <Button variant="contained" size="large" sx={{backgroundColor:'#28665B',width:'80%',height:50, marginTop:3}}>Sign Up</Button>
+            <Button variant="contained" size="large" sx={{backgroundColor:'#28665B',width:'80%',height:50, marginTop:3}}>{signUpPage ? 'Sign Up' :  "Sign In" }</Button>
             <Box sx={{display:'flex',justifyContent:'center' ,alignItems:'center'}}>
             <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
-                Already Have an Account ?
+               {signUpPage ? 'Already Have an Account ?' :  "Don't Have an Account ?" } 
               </Typography>
-              <Button href="#text-buttons" sx={{color:'#28665B'}}>Sign In</Button>
+              <Button onClick={handleForm} href="#text-buttons" sx={{color:'#28665B'}}>{signUpPage ? 'Sign In' :  "Sign Up" }</Button>
             </Box>  
           </Box>
+
+     
+          
         </Box>
       </Container>
     </>
