@@ -77,7 +77,7 @@ const SignUp = () => {
             <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
                {signUpPage ? 'Already Have an Account ?' :  "Don't Have an Account ?" } 
               </Typography>
-              <Button onClick={handleForm} href="#text-buttons" sx={{color:'#28665B'}}>{signUpPage ? 'Sign In' :  "Sign Up" }</Button>
+              <Button onClick={handleForm} href="#text-buttons" sx={{color:'var(--primary-color)'}}>{signUpPage ? 'Sign In' :  "Sign Up" }</Button>
             </Box>  
           </Box>
 

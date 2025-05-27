@@ -1,5 +1,10 @@
 body, html {
   margin: 0;
   padding: 0;
-  
+}
+
+:root {
+  --primary-color: #28665B;
+  --secondary-color: #f0f0f0;
+  --text-color: #707070;
 }
