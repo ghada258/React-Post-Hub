@@ -4,14 +4,21 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
-  const [signUpPage,setSignUpPage] = useState(true);
-  
-  const handleForm =()=>{
-    setSignUpPage(!signUpPage);
-  }
+  const location = useLocation();
+  const signUpPage = location.pathname === '/SignUp';
+  const navigate = useNavigate();
+
+   const toggleForm = () => {
+    navigate(signUpPage ? '/Login' : '/SignUp' );
+  };
+
+    const NavigateHome =()=>{
+      navigate('/');
+    }
 
   return (
     <>
@@ -72,12 +79,12 @@ const SignUp = () => {
               sx={{ width: "80%" }}
             />
             
-            <Button variant="contained" size="large" sx={{backgroundColor:'#28665B',width:'80%',height:50, marginTop:3}}>{signUpPage ? 'Sign Up' :  "Sign In" }</Button>
+            <Button onClick={NavigateHome} variant="contained" size="large" sx={{ cursor:'pointer' ,backgroundColor:'#28665B',width:'80%',height:50, marginTop:3}}>{signUpPage ? 'Sign Up' :  "Sign In" }</Button>
             <Box sx={{display:'flex',justifyContent:'center' ,alignItems:'center'}}>
             <Typography variant="body1" component="p" sx={{color:'#A5A5A5'}}>
                {signUpPage ? 'Already Have an Account ?' :  "Don't Have an Account ?" } 
               </Typography>
-              <Button onClick={handleForm} href="#text-buttons" sx={{color:'var(--primary-color)'}}>{signUpPage ? 'Sign In' :  "Sign Up" }</Button>
+              <Button  onClick={toggleForm}  sx={{ cursor:'pointer' ,color:'var(--primary-color)'}}>{signUpPage ? 'Sign In' :  "Sign Up" }</Button>
             </Box>  
           </Box>
 
