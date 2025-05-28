@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,6 +10,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Box } from '@mui/material';
 
 const CardComponent = (props) => {
+
+
+
   return (
     <>
      <Card sx={{bgcolor:'#F3F3F3',maxWidth: 350,padding:2,borderRadius:5}}>
@@ -29,11 +32,14 @@ const CardComponent = (props) => {
          {props.description}
         </Typography>
       </CardContent>
-      <CardActions sx={{display:'flex' ,justifyContent:'flex-end' ,alignItems:'flex-end',paddingBottom:2,paddingRight:2}}>
+      {props.isLoggedIn && <CardActions sx={{display:'flex' ,justifyContent:'flex-end' ,alignItems:'flex-end',paddingBottom:2,paddingRight:2}}>
          <EditIcon baseClassName="fas"  sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'#F3F3F3',padding:1,borderRadius:1}}  />
          <DeleteIcon baseClassName="fas"  sx={{ cursor:'pointer' ,color:'#8C0F0F',bgcolor:'#F3F3F3',padding:1,borderRadius:1}}  />
 
-      </CardActions>
+       </CardActions>
+      
+      }
+     
       </Box>
     </Card>
 

@@ -1,8 +1,78 @@
 {
-     "users": [
-   
-    ]
-   ,
+  "users": [
+    {
+      "email": "ghadaelsayed20@gmail.com",
+      "password": "$2a$10$XH/2KIxNtI.8kGrh6103OuZikkWQZUN7RHMgwj/RART6VO6mtFFbG",
+      "name": "ghada",
+      "id": 1
+    },
+    {
+      "email": "ghadaelsayed@gmail.com",
+      "password": "$2a$10$ShsxW9vyl08znqFh2dTTdOCZ7nTM6PXNrOQ.F9nKWqDvxP0QnxqeO",
+      "name": "ghada",
+      "id": 2
+    },
+    {
+      "email": "ghada@gmail.com",
+      "password": "$2a$10$CGghpLnzK/S9K3l.ePpxaeBkNHubyD8Lu6OE3lAaK.FDfogOXthFC",
+      "name": "ghada",
+      "id": 3
+    },
+    {
+      "email": "eman@gmail.com",
+      "password": "$2a$10$tYUNUNPpNHtd8Jq4TiLgdOFc1x6PzstVK4bB/l6gti1Tm.civVHKi",
+      "name": "eman",
+      "id": 4
+    },
+    {
+      "email": "hoda@gmail.com",
+      "password": "$2a$10$rPqSigLdbOB4SRs/BrmeV.Ur6SxXpVh1IhcEzDYKWn.urLyhJKssW",
+      "name": "hoda",
+      "id": 5
+    },
+    {
+      "email": "manar@gmail.com",
+      "password": "$2a$10$K12VHOw8Ctj6v5FDm4OluuWGYEoDrn3f5Hd7rbNViXi2MaC66Yt5a",
+      "name": "manar",
+      "id": 6
+    },
+    {
+      "email": "amal@gmail.com",
+      "password": "$2a$10$d2q40zW8fpKgLQvePZ1dQeyYhTZTJRr0Fp7.VCqkt8./AYPaRHb1W",
+      "name": "amal",
+      "id": 7
+    },
+    {
+      "email": "hala@gmail.com",
+      "password": "$2a$10$L/Vfbg3h9qKH9UAUxTgyje6jSB49pBooTWuRWAz9XsL0ITuNDWtEq",
+      "name": "hala",
+      "id": 8
+    },
+    {
+      "email": "marwa@gmail.com",
+      "password": "$2a$10$U9wbOS9ztFig0E0uE5mkZOLs0P./UWPFZuNafWAE6iU8Zzs.LvOO2",
+      "name": "marwa",
+      "id": 9
+    },
+    {
+      "email": "amani@gmail.com",
+      "password": "$2a$10$jsJy5jF9EJpxv/EFnnVHj.n80VUlfHum.OkNx5d3VR5EzkByz2JQS",
+      "name": "Amani",
+      "id": 10
+    },
+    {
+      "email": "jana@gmail.com",
+      "password": "$2a$10$V7JWJgn4UQGYj96XlInydeW2cNFFxiz3SkT515VLl85xMJcjj3ejm",
+      "name": "jana",
+      "id": 11
+    },
+    {
+      "email": "mai@gmail.com",
+      "password": "$2a$10$qffSUH0.k9ptP1YuRVnAWOThYr58M8rueJznsoDFKijVgNR6ADAEG",
+      "name": "Mai",
+      "id": 12
+    }
+  ],
   "products": [
     {
       "id": 1,
