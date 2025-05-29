@@ -73,6 +73,7 @@ const handleSubmit = async (e) => {
       console.log("Registered successfully:", response.data);
       localStorage.setItem("token", response.data.accessToken); 
       localStorage.setItem("username", response.data.user.name);
+      localStorage.setItem("userId", response.data.user.id);
       navigate('/');
     } else {
       const response = await axios.post("http://localhost:3000/login", {
@@ -82,6 +83,7 @@ const handleSubmit = async (e) => {
       console.log("Logged in successfully:", response.data);
       localStorage.setItem("token", response.data.accessToken); 
       localStorage.setItem("username", response.data.user.name);
+       localStorage.setItem("userId", response.data.user.id);
       navigate('/');
     }
   } catch (err) {

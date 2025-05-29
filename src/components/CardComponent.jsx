@@ -12,11 +12,10 @@ import { Box } from '@mui/material';
 const CardComponent = (props) => {
 
 
-
   return (
     <>
-     <Card sx={{bgcolor:'#F3F3F3',maxWidth: 350,padding:2,borderRadius:5}}>
-      <Box sx={{bgcolor:'white',borderRadius:5}}>
+     <Card sx={{bgcolor:'#F3F3F3',maxWidth: 350,padding:2,borderRadius:5 ,height:400}}>
+      <Box sx={{bgcolor:'white',borderRadius:5 ,height: '100%'}}>
       <CardMedia
         component="img"
         alt={props.title}
@@ -24,21 +23,32 @@ const CardComponent = (props) => {
         image={props.image}
         sx={{borderRadius:'8px 8px 0px 0px'}}
       />
-      <CardContent>
+      <CardContent >
         <Typography gutterBottom variant="h6" component="div">
           {props.title}
+          {/* {props.UserPost} */}
         </Typography>
-        <Typography variant="body2" width={285} sx={{ color: 'text.secondary'}}>
+        <Typography variant="body2" width={285}  sx={{ color: 'text.secondary'}}>
          {props.description}
         </Typography>
       </CardContent>
-      {props.isLoggedIn && <CardActions sx={{display:'flex' ,justifyContent:'flex-end' ,alignItems:'flex-end',paddingBottom:2,paddingRight:2}}>
-         <EditIcon baseClassName="fas"  sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'#F3F3F3',padding:1,borderRadius:1}}  />
-         <DeleteIcon baseClassName="fas"  sx={{ cursor:'pointer' ,color:'#8C0F0F',bgcolor:'#F3F3F3',padding:1,borderRadius:1}}  />
+      {(props.isLoggedIn && (props.UserPost === props.userId)) ?(
+        <CardActions sx={{display:'flex' ,justifyContent:'flex-end' ,alignItems:'flex-end',paddingBottom:2,paddingRight:2}}>
+         <EditIcon baseClassName="fas" onClick={() => {props.setOpen(true) ,props.onEdit()}}   sx={{ cursor:'pointer' ,color:'var(--primary-color)',bgcolor:'#F3F3F3',padding:1,borderRadius:1}}  />
+         <DeleteIcon baseClassName="fas" onClick={props.onDelete} sx={{ cursor:'pointer' ,color:'#8C0F0F',bgcolor:'#F3F3F3',padding:1,borderRadius:1}}  />
 
        </CardActions>
-      
+      ):(
+         <CardActions sx={{display:'flex' ,justifyContent:'flex-end' ,alignItems:'flex-end',paddingBottom:2,paddingRight:2}}>
+         <div></div>
+         <div></div>
+       </CardActions>
+      )
+       
       }
+      
+      
+      
      
       </Box>
     </Card>
